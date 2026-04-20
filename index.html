@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name — Researcher</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>YN<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu" id="mobileMenu">
+      <li><a href="#about"    onclick="toggleMenu()">About</a></li>
+      <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+      <li><a href="#cv"       onclick="toggleMenu()">CV</a></li>
+      <li><a href="#contact"  onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-text" aria-hidden="true">RESEARCH</div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">Researcher · University Name</div>
+        <h1 class="hero-name">
+          <span class="name-first">Your</span>
+          <span class="name-last">Name</span>
+        </h1>
+        <p class="hero-bio">I study <em>[your research area]</em> at the intersection of [field A] and [field B]. My work focuses on building [brief mission — one line].</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="assets/cv.pdf" target="_blank" class="btn btn-ghost">Download CV ↗</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><span class="hstat-n">12</span><span class="hstat-l">Publications</span></div>
+          <div class="hstat-div"></div>
+          <div class="hstat"><span class="hstat-n">4+</span><span class="hstat-l">Years research</span></div>
+          <div class="hstat-div"></div>
+          <div class="hstat"><span class="hstat-n">3</span><span class="hstat-l">Active projects</span></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-avatar">YN</div>
+          <div class="hero-card-chips">
+            <span class="chip chip-maroon">Machine Learning</span>
+            <span class="chip chip-gold">NLP</span>
+            <span class="chip chip-dark">HCI</span>
+            <span class="chip chip-maroon">Data Science</span>
+            <span class="chip chip-gold">CSS</span>
+          </div>
+          <div class="hero-card-info">
+            <div class="hci-row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2C5.24 2 3 4.24 3 7c0 4 5 9 5 9s5-5 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg>
+              City, Country
+            </div>
+            <div class="hci-row">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="12" height="9" rx="1"/><path d="M2 5l6 5 6-5"/></svg>
+              yourname@university.edu
+            </div>
+          </div>
+        </div>
+        <div class="hero-deco-1"></div>
+        <div class="hero-deco-2"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <p>Welcome! I am a <strong>PhD student / Postdoctoral Researcher</strong> at [University], working in the [Department / Lab Name]. My research explores [core topic], with a particular focus on [specific angle or method].</p>
+          <p>Before joining [current institution], I completed my studies at [previous university]. I have collaborated with [institutions or labs] and my work has been published in [journals or conferences].</p>
+          <div class="about-quote">
+            <span class="quote-mark">"</span>
+            <p>Your research philosophy or a short inspiring sentence about your work goes here.</p>
+          </div>
+        </div>
+        <div class="about-sidebar fade-up" style="--delay:0.15s">
+          <div class="about-info-block">
+            <div class="aib-row"><span class="aib-label">Affiliation</span><span class="aib-val">University Name</span></div>
+            <div class="aib-row"><span class="aib-label">Department</span><span class="aib-val">Dept. of [Field]</span></div>
+            <div class="aib-row"><span class="aib-label">Position</span><span class="aib-val">PhD Researcher</span></div>
+            <div class="aib-row"><span class="aib-label">Location</span><span class="aib-val">City, Country</span></div>
+          </div>
+          <div class="interests-block">
+            <p class="interests-label">Research interests</p>
+            <div class="interest-tags" id="interestTags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <div class="section-header section-header-light">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="cv-cols">
+        <div class="cv-col">
+          <div id="cvEducation"></div>
+          <div id="cvAwards"></div>
+        </div>
+        <div class="cv-col">
+          <div id="cvPublications"></div>
+        </div>
+      </div>
+      <div class="cv-download fade-up">
+        <a href="assets/cv.pdf" target="_blank" class="btn btn-primary">Download full CV (PDF)</a>
+        <span class="cv-date">Last updated April 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-maroon">
+    <div class="container">
+      <div class="section-header section-header-light">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Get in touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left fade-up">
+          <p class="contact-intro">I am always happy to hear from prospective collaborators, students, or anyone curious about my research.</p>
+          <div class="contact-links" id="contactLinks"></div>
+        </div>
+        <form class="contact-form fade-up" style="--delay:0.15s" onsubmit="handleContactForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="What is this about?"/>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Your message…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-white">Send message →</button>
+          <p id="formNote" class="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>YN<span class="logo-bracket">]</span></span>
+      <p>© <span id="year"></span> Your Name · All rights reserved</p>
+      <div class="footer-socials" id="footerSocials"></div>
+    </div>
+  </footer>
+
+  <script src="data/interests.js"></script>
+  <script src="data/projects.js"></script>
+  <script src="data/cv.js"></script>
+  <script src="data/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
